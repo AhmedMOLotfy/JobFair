@@ -1,0 +1,16 @@
+.navbar-section {
+    /*background-color: #ffffff;*/
+    background-color: #eee;
+}
+
+button {
+    padding: 6px 15px;
+    border: none;
+    background-color: #4357d1;
+    color: white;
+    border-radius: 2px;
+}
+
+button span {
+    font-size: 14px;
+}

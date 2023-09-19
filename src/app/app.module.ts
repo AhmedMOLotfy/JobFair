@@ -8,13 +8,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {ReactiveFormsModule} from "@angular/forms";
 import {AppRoutingModule} from "./app-routing.module";
 import { HeaderNavComponent } from './header/header-nav/header-nav.component';
+import { LandingComponent } from './header/landing/landing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HeaderTopComponent,
-    HeaderNavComponent
+    HeaderNavComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
