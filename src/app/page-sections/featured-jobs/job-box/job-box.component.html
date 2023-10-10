@@ -2,22 +2,22 @@
   <div class="d-flex">
     <div class="company-logo">
       <img alt="company-logo"
-           [src]="job_box?.imagePath">
+           [src]="job_box.imagePath">
     </div>
     <div class="job-info">
-      <h5 class="mb-1 text-start">{{job_box?.jobTitle}}</h5>
+      <h5 class="mb-1 text-start">{{job_box.jobTitle}}</h5>
       <div class="job-loc-time text-start">
                 <span>
                   <fa-icon [icon]="faLocationDot" class="me-1"></fa-icon>
-                </span>{{job_box?.jobPlace}}
+                </span>{{job_box.jobPlace}}
         <span>
                   <fa-icon [icon]="faClockRotateLeft" class="ms-1 me-1"></fa-icon>
-                </span>{{job_box?.timePassed}} hours ago
+                </span>{{job_box.timePassed}} hours ago
       </div>
       <div class="job-status text-start">
-        <span>{{job_box?.jobType}}</span>
-        <span>{{job_box?.jobStatus}}</span>
-        <span>&dollar;{{job_box?.jobSalaryMin}}-&dollar;{{job_box?.jobSalaryMax}}</span>
+        <span>{{job_box.jobType}}</span>
+        <span>{{job_box.jobStatus}}</span>
+        <span>&dollar;{{job_box.jobSalaryMin}}-&dollar;{{job_box.jobSalaryMax}}</span>
       </div>
     </div>
   </div>
