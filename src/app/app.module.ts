@@ -17,6 +17,7 @@ import {FeaturedJobsComponent} from "./page-sections/featured-jobs/featured-jobs
 import {JobBoxComponent} from './page-sections/featured-jobs/job-box/job-box.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CandidatesComponent } from './candidates/candidates.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { CandidatesComponent } from './candidates/candidates.component';
     FontAwesomeModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
