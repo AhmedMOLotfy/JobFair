@@ -1,10 +1,10 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import {AppComponent} from "./app.component";
+import {PageSectionsComponent} from "./page-sections/page-sections.component";
 
 
 const appRoutes: Routes = [
-  {path: '', component: AppComponent},
+  {path: '', component: PageSectionsComponent},
 ];
 
 @NgModule({

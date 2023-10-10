@@ -1,0 +1,79 @@
+/*Landing Image*/
+.landing-section {
+    background-image: url("/assets/career-services-hero-for-employers_0.jpg");
+    background-size: cover;
+    height: calc(100vh - 92px);
+    position: relative;
+}
+
+/*Transparent Layer*/
+.landing-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #0000006e;
+}
+
+/**/
+.landing-section p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.landing-section input {
+    padding: 6px 6px 6px 28px;
+    border-radius: 4px;
+    border: none;
+}
+
+/*Font Awesome Icons Position */
+.landing-section fa-icon {
+    position: absolute;
+    left: 12px;
+    transform: translate(32%,27%);
+    top: 0;
+}
+
+.landing-section input:focus
+{
+    outline: 2px solid #4357d1;
+    border: none;
+}
+
+
+.landing-section form > div {
+    padding: 20px;
+    background-color: #ffffff54;
+}
+
+.landing-section .insider {
+    justify-content: start;
+    align-items: center;
+}
+
+.landing-section .insider p{
+    text-align: start;
+}
+
+/*Layout of  Medium and Smaller Screens*/
+@media screen and (max-width: 992px) {
+    .landing-section .insider {
+        justify-content: center;
+    }
+    .landing-section .insider p{
+        text-align: center;
+    }
+
+    .form-div {
+        margin: auto;
+    }
+}
+
+.search-button button {
+    background-color: #4357d1;
+}
+
+/**/

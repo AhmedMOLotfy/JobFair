@@ -1,0 +1,19 @@
+/* The whole section (title and jobs) */
+.featured-jobs-section {
+  background-color: #f8f9fb;
+}
+
+/*The whole jobs section*/
+.featured-jobs-section .jobs-section {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+
+/* The box itself (job) advertise */
+.featured-jobs-section .job {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #8080803d;
+  border-radius: 5px;
+}

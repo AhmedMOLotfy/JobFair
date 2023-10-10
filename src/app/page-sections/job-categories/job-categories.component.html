@@ -1,0 +1,9 @@
+<div class="job-categories-section text-center mt-5 mb-3">
+    <div class="container">
+        <app-section-title [customTitle]="'Popular Job Categories'"></app-section-title>
+        <div class="job-categories-boxes mt-5 row gy-3 gx-3">
+            <app-job-detail class="category-box col-lg-4 col-md-6 col-sm-12" *ngFor="let job of jobCategories" [jobCategory]="job"></app-job-detail>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,51 @@
+.box-insider {
+    background-color: #f8f9fb;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+fa-icon {
+    color: #4357d1c9;
+    font-size: 30px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.text {
+    margin-left: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.text h4 {
+    font-weight: 600;
+    font-size: 22px;
+    text-align: start;
+}
+
+.text p {
+    color: #00000096;
+    font-size: 14px;
+    margin: 0;
+    text-align: start;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .box-insider {
+        flex-direction: column;
+    }
+
+    .box-insider .text {
+        margin-top: 10px;
+    }
+
+    .box-insider h4, .box-insider p {
+        text-align: center;
+    }
+
+}
+
+

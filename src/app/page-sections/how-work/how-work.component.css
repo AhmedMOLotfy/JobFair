@@ -1,0 +1,73 @@
+.how-work-section {
+    /*background-color: #3c1aa2;*/
+    background: linear-gradient(to right, #3c1aa2, #4150cd);
+}
+
+.how-work-section .text-section {
+    color: white;
+}
+
+.how-work-section .text-section h2 {
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.how-work-section .text-section p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.steps-section {
+    /*gap: 30px;*/
+    margin-top: 50px;
+}
+
+.steps-section .icon-box {
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps-section .icon-box fa-icon {
+    color: var(--main-blue-color);
+    font-size: 20px;
+}
+
+.steps-section > fa-icon {
+    font-size: 23px;
+    position: relative;
+    top: 5px;
+    padding: 10px;
+}
+
+.diagrams-section .box {
+  background-color: #4150cdd1;
+  padding: 10px;
+  color: white;
+  margin: 10px 30px;
+  border-radius: 10px;
+}
+
+.diagrams-section .box .content {
+
+}
+
+.diagrams-section .box .content p {
+  margin: 0;
+}
+
+.diagrams-section svg {
+  width: 40px;
+  height: 40px;
+
+}
+
+svg path {
+  color: white;
+}

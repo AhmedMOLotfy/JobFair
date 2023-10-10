@@ -1,7 +1,7 @@
 .top-header {
   background-color: #1e1e1e;
   color: white;
-  font-size: 9px;
+  font-size: 12px;
   height: 30px;
 }
 
@@ -14,19 +14,19 @@
 
 .top-header .container .contact-portion {
   display: flex;
-  gap: 9px;
+  gap: 10px;
   align-items: center;
 }
 
 .top-header .container .contact-portion div > * {
-  margin-right: 4px;
+  margin-right: 5px;
 }
 
 .top-header .container .user-portion {
   display: flex;
-  gap: 9px;
+  gap: 10px;
 }
 
 .top-header .user-portion div > * {
-  margin-right: 4px;
+  margin-right: 5px;
 }
