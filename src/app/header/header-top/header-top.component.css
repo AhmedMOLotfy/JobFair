@@ -25,8 +25,29 @@
 .top-header .container .user-portion {
   display: flex;
   gap: 10px;
+  height: 100%;
+  align-items: center;
+}
+
+.user-portion > * {
+  height: 100%;
 }
 
 .top-header .user-portion div > * {
   margin-right: 5px;
+}
+
+.button-pointer {
+  padding-left: 5px;
+  padding-right: 3px;
+}
+
+.user-portion > * {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.user-portion > *:hover {
+  background-color: grey;
 }
