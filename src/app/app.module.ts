@@ -16,8 +16,9 @@ import {JobDetailComponent} from "./page-sections/job-categories/job-detail/job-
 import {FeaturedJobsComponent} from "./page-sections/featured-jobs/featured-jobs.component";
 import {JobBoxComponent} from './page-sections/featured-jobs/job-box/job-box.component';
 import {HttpClientModule} from "@angular/common/http";
-import { CandidatesComponent } from './candidates/candidates.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {CandidatesComponent} from './candidates/candidates.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AuthComponent } from './auth/auth.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     JobDetailComponent,
     FeaturedJobsComponent,
     JobBoxComponent,
-    CandidatesComponent
+    CandidatesComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,

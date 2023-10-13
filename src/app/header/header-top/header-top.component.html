@@ -11,11 +11,11 @@
       </div>
     </div>
     <div class="user-portion">
-      <div class="login-button button-pointer">
+      <div class="login-button button-pointer" [routerLink]="'/login'" [routerLinkActive]="'activeButton'">
         <fa-icon [icon]="faArrowRightToBracket"></fa-icon>
         <span>Login</span>
       </div>
-      <div class="register-button button-pointer">
+      <div class="register-button button-pointer" [routerLink]="'/register'" [routerLinkActive]="'activeButton'">
         <fa-icon [icon]="faUserPlus"></fa-icon>
         <span>Register</span>
       </div>

@@ -48,6 +48,6 @@
   align-items: center;
 }
 
-.user-portion > *:hover {
-  background-color: grey;
+.user-portion > *:hover , .activeButton {
+  background-color: #4357d1;
 }
