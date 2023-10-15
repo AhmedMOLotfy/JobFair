@@ -1,0 +1,96 @@
+<div class="auth-section">
+  <div class="container">
+    <div class="row justify-content-around">
+      <form
+        (ngSubmit)="OnSubmit()"
+        [formGroup]="authForm" class="mt-4 col-lg-5 col-md-7 col-sm-9"
+      >
+        <h2 class="text-center">Register</h2>
+        <div class="">
+          <div class="mb-3">
+            <label class="fw-bold col-form-label">UserName</label>
+            <input [ngClass]=
+                     "(isSubmitted && !authForm.get('username')?.valid) ? 'form-error' : ''"
+                   class="form-control"
+                   formControlName="username"
+                   name="username"
+                   placeholder="username"
+                   type="text"
+            >
+            <p
+              *ngIf="(isSubmitted && !authForm.get('username')?.valid) ||
+               (!authForm.get('username')?.valid && authForm.get('username')?.touched)"
+              class="invalid-message">
+              Enter a valid
+              username</p>
+          </div>
+          <!--**********************************-->
+          <div class="mb-3">
+            <label class="fw-bold col-form-label">Email</label>
+            <input [ngClass]=
+                     "(isSubmitted && !authForm.get('email')?.valid) ? 'form-error' : ''"
+                   class="form-control"
+                   formControlName="email"
+                   name="email"
+                   placeholder="email"
+                   type="text"
+            >
+            <p
+              *ngIf="(isSubmitted && !authForm.get('email')?.valid) ||
+               (!authForm.get('email')?.valid && authForm.get('email')?.touched)"
+              class="invalid-message">
+              Enter a valid
+              email</p>
+          </div>
+          <div class="mb-0 position-relative input-box">
+            <label class="fw-bold col-form-label">Password</label>
+            <input [ngClass]=
+                     "(isSubmitted && !authForm.get('password')?.valid) ? 'form-error' : ''"
+                   class="form-control"
+                   formControlName="password"
+                   name="password"
+                   placeholder="password"
+                   type="{{!showPass ? 'password' : 'text'}}"
+
+            >
+            <fa-icon
+              (click)="onShowPass()"
+              *ngIf="showPass && authForm.get('password')?.dirty"
+              [icon]="farEye">
+            </fa-icon>
+            <fa-icon
+              (click)="onShowPass()"
+              *ngIf="!showPass && authForm.get('password')?.dirty"
+              [icon]="farEyeSlash">
+            </fa-icon>
+
+          </div>
+          <p
+            *ngIf="(isSubmitted && !authForm.get('password')?.valid)
+                  || (!authForm.get('password')?.valid && authForm.get('password')?.touched)"
+            class="invalid-message mt-0">
+            Min Length is 6
+          </p>
+          <div>
+            <div class="w-100 mt-3">
+              <button
+                class="btn btn-primary"
+                type="submit">
+                Register
+              </button>
+            </div>
+            <hr>
+            <div class="w-100">
+              <button
+                (click)="toLogin()"
+                class="btn btn-primary"
+                type="button">
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
