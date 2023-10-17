@@ -4,6 +4,7 @@ import {PageSectionsComponent} from "./home-page/page-sections/page-sections.com
 import {CandidatesComponent} from "./candidates/candidates.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {RegisterComponent} from "./auth/register/register.component";
+import {JobsListingComponent} from "./jobs-listing/jobs-listing.component";
 
 
 const appRoutes: Routes = [
@@ -11,6 +12,7 @@ const appRoutes: Routes = [
   {path: 'candidates', component: CandidatesComponent},
   {path: 'login',component: LoginComponent},
   {path: 'register',component: RegisterComponent},
+  {path: 'job-listing',component: JobsListingComponent}
 ];
 
 @NgModule({

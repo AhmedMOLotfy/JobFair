@@ -21,6 +21,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { JobsListingComponent } from './jobs-listing/jobs-listing.component';
+import {BsDropdownModule} from "ngx-bootstrap/dropdown";
 
 
 @NgModule({
@@ -41,15 +42,16 @@ import { JobsListingComponent } from './jobs-listing/jobs-listing.component';
     LoginComponent,
     JobsListingComponent
   ],
-  imports: [
-    BrowserModule,
-    FontAwesomeModule,
-    ReactiveFormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        FontAwesomeModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        BsDropdownModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

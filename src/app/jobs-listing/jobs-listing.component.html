@@ -1,0 +1,163 @@
+<div class="job-listing-section">
+  <div class="container">
+    <div class="section-headline">
+      <div class="main-headline">
+        <h3>Job Listing</h3>
+        <p>Home / Job listing</p>
+      </div>
+    </div>
+  </div>
+  <div class="full-job-section">
+    <div class="container">
+      <form [formGroup]="searchForm">
+        <div class="jobs-list-section d-flex gap-3">
+          <div class="filter-set">
+            <div class="search-set">
+              <input
+                class="form-control"
+                name="Search"
+                placeholder="Search"
+                type="text">
+              <input
+                class="form-control"
+                name="Category"
+                placeholder="Category"
+                type="text">
+            </div>
+            <hr>
+            <div class="job-type">
+              <p>Job Type</p>
+              <div class="radio-filter position-relative">
+                <div *ngFor="let jobType of jobTypes" class="radio">
+                  <label>
+                    <input
+                      [value]="jobType"
+                      formControlName="jobType"
+                      name="jobType"
+                      required
+                      type="radio"
+                    >
+                    <span>{{jobType}}</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="job-type">
+              <p>Last Activity</p>
+              <div class="radio-filter position-relative">
+                <div *ngFor="let lastActivity of lastActivityList" class="radio">
+                  <label>
+                    <input
+                      [value]="lastActivity"
+                      formControlName="lastActivity"
+                      name="lastActivity"
+                      required
+                      type="radio"
+                    >
+                    <span>{{lastActivity}}</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="job-type">
+              <p>Experience</p>
+              <div class="radio-filter position-relative">
+                <div *ngFor="let experience of experienceList" class="radio">
+                  <label>
+                    <input
+                      [value]="experience"
+                      formControlName="experience"
+                      name="experience"
+                      required
+                      type="radio"
+                    >
+                    <span>{{experience}}</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="job-type">
+              <p>Salary Range</p>
+              <div class="radio-filter position-relative">
+                <div *ngFor="let salary of salaryRangeList" class="radio">
+                  <label>
+                    <input
+                      [value]="salary"
+                      formControlName="salaryRange"
+                      name="salaryRange"
+                      required
+                      type="radio"
+                    > <span>{{salary}}</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="job-type">
+              <p>Gender</p>
+              <div class="radio-filter position-relative">
+                <div *ngFor="let gender of genders" class="radio">
+                  <label>
+                    <input
+                      [value]="gender"
+                      formControlName="gender"
+                      type="radio"> <span>{{ gender }}</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div (click)="onSubmit()" class="jobs-card-list">
+            <!--Top Section of left side-->
+            <div class="d-flex justify-content-between mt-2">
+              <div class="sort-prefs mt-0 d-flex gap-2 align-items-center">
+                <p class="m-0">Sort by</p>
+                <span class="dropdown-toggle">Top Rated</span>
+              </div>
+              <div class="asc-order mt-auto mb-auto">
+                <div class="icon-rounder">
+                  <fa-icon [icon]="faSort" >
+                  </fa-icon>
+                </div>
+              </div>
+            </div>
+            <!--Job list itself-->
+            <div class="job-box-list mt-4">
+              <div class="job d-flex justify-content-between">
+                <div class="d-flex logo-info">
+                  <div class="company-logo">
+                    <img alt="company-logo"
+                         [src]="job_box.imagePath">
+                  </div>
+                  <div class="job-info">
+                    <h5 class="mb-1 text-start">{{job_box.jobTitle}}</h5>
+                    <div class="job-loc-time text-start">
+                <span>
+                  <fa-icon [icon]="faLocationDot" class="me-1"></fa-icon>
+                </span>{{job_box.jobPlace}}
+                      <span>
+                  <fa-icon [icon]="faClockRotateLeft" class="ms-1 me-1"></fa-icon>
+                </span>{{job_box.timePassed}} hours ago
+                    </div>
+                    <div class="job-status text-start">
+                        <span>{{job_box.jobType}}</span>
+                        <span>{{job_box.jobStatus}}</span>
+                        <span>&dollar;{{job_box.jobSalaryMin}}-&dollar;{{job_box.jobSalaryMax}}</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-auto mb-auto apply-btn">
+                  <button class="btn btn-primary">Apply Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

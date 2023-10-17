@@ -1,0 +1,234 @@
+/* Headline style */
+.section-headline {
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section-headline p {
+  font-size: 14px;
+  color: #00000096;
+}
+
+/* Headline style */
+.full-job-section {
+  background-color: #f8f9fb;
+  /*min-height: 1000px;*/
+}
+
+/* left and right sides padding-top  */
+.jobs-list-section {
+  padding-top: 20px;
+}
+
+/* left side section */
+.filter-set {
+  background-color: white;
+}
+
+/* left-side */
+.jobs-list-section .filter-set {
+  flex: 1;
+  border-radius: 10px;
+}
+
+/* search engine input */
+.jobs-list-section .filter-set .search-set {
+  padding: 12px 12px 9px;
+}
+
+/* search engines input */
+.jobs-list-section .filter-set input {
+  margin-bottom: 10px;
+}
+
+/* hr between sections */
+hr {
+  margin: 0;
+  color: #00000047;
+}
+
+/* filter set prefs */
+.filter-set .job-type {
+  padding: 12px;
+}
+
+/* right side flex */
+.jobs-list-section .jobs-card-list {
+  flex: 4;
+}
+
+
+.job-type p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.job-type label {
+  color: #000000ab;
+  font-size: 13px;
+}
+
+label span {
+  position: absolute;
+  margin-top: -1px;
+  margin-left: 4px;
+}
+
+.search-set input {
+  font-size: 12px;
+}
+
+.jobs-card-list {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.jobs-card-list .sort-prefs {
+  margin-top: 20px;
+}
+
+.jobs-card-list .sort-prefs span {
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #eee;
+  color: #000000ab;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/**/
+.jobs-card-list .sort-prefs .dropdown-toggle::after {
+  margin-left: 15px;
+  color: #000000ab;
+}
+
+.asc-order .icon-rounder fa-icon {
+  color: #0000009c;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/**************************************************************/
+/**************************************************************/
+/**************************************************************/
+/**************************************************************/
+/**************************************************************/
+/**************************************************************/
+/**************************************************************/
+/**************************************************************/
+
+
+/* The box itself (job) advertise */
+.job {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #8080803d;
+  border-radius: 5px;
+}
+
+.job:hover {
+  border-color: #4357d1;
+}
+
+/* Company logo */
+.job .company-logo img {
+  margin-top: 5px;
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+/* Job information styles */
+.job .job-loc-time {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #000000a3;
+}
+
+
+/* Color of fontawesome icons in every jon (location ans history icons) */
+.job .job-info fa-icon{
+  color: #4357d1;
+}
+
+/* Font Size of salary span */
+.job-status span:last-child{
+  font-size: 15px;
+}
+
+
+/* styles of colored boxes */
+.job-status span:not(:last-child){
+  padding: 3px;
+  font-size: 13px;
+  background-color: #e4e9fb;
+  color: #8e94be;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+/* styles of second colored box */
+.job-status span:nth-of-type(2){
+  background-color: #fef0da;
+  color: #e8bd8d;
+}
+
+.apply-btn button {
+  background-color: #4357d1;
+}
+
+@media (max-width: 767px) {
+  .jobs-card-list {
+    padding: 10px;
+  }
+  .job {
+    padding: 9px;
+  }
+  .jobs-card-list .job {
+    flex-direction: column;
+  }
+  .logo-info {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .job .company-logo {
+    margin: auto;
+  }
+  .job {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  .job .company-logo img {
+    margin: auto;
+  }
+
+  .job h5 {
+    margin-top: 8px;
+    text-align: center!important;
+  }
+
+  .job-loc-time {
+    margin-top: 10px;
+    text-align: center!important;
+  }
+
+  .job-status {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center!important;
+
+  }
+
+  .job-status span:not(:last-child){
+    /*padding: 5px 10px;*/
+    margin-right: 2px;
+    padding: 1px;
+    /*width: fit-content;*/
+  }
+}
+
