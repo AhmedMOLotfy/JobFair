@@ -11,19 +11,19 @@
       </div>
     </div>
     <div class="user-portion">
-      <div *ngIf="!isLoggedIn" class="login-button button-pointer" [routerLink]="'/login'" [routerLinkActive]="'activeButton'">
+      <div *ngIf="!(currentUser$ | async)" class="login-button button-pointer" [routerLink]="'/login'" [routerLinkActive]="'activeButton'">
         <fa-icon  [icon]="faArrowRightToBracket"></fa-icon>
         <span>Login</span>
       </div>
-      <div *ngIf="!isLoggedIn" class="register-button button-pointer" [routerLink]="'/register'" [routerLinkActive]="'activeButton'">
+      <div *ngIf="!(currentUser$ | async)" class="register-button button-pointer" [routerLink]="'/register'" [routerLinkActive]="'activeButton'">
         <fa-icon [icon]="faUserPlus"></fa-icon>
         <span>Register</span>
       </div>
-      <div *ngIf="isLoggedIn" class="register-button button-pointer" [routerLink]="'/job-listing'" [routerLinkActive]="'activeButton'">
+      <div *ngIf="currentUser$ | async" class="register-button button-pointer" [routerLink]="'/job-listing'" [routerLinkActive]="'activeButton'">
         <fa-icon [icon]="faUser"></fa-icon>
         <span>My Account</span>
       </div>
-      <div *ngIf="isLoggedIn" class="register-button button-pointer" [routerLink]="'/'"
+      <div *ngIf="currentUser$ | async" class="register-button button-pointer" [routerLink]="'/'"
         (click)="logout()">
         <fa-icon [icon]="faArrowRightFromBracket"></fa-icon>
         <span>Logout</span>

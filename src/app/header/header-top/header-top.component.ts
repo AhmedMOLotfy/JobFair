@@ -25,25 +25,16 @@ export class HeaderTopComponent implements OnInit{
   faUser = faUser;
   faArrowRightFromBracket = faArrowRightFromBracket;
 
-  isLoggedIn = false;
-
+  currentUser$: Observable<UserDto | null> = of(null);
 
   constructor(private authService: AccountService, private router: Router) {
   }
 
   ngOnInit() {
-    this.authService.currentUser$.subscribe({
-      next: (user) => this.isLoggedIn = !!user,
-      error: (error) => console.log(error),
-    })
+    this.currentUser$ = this.authService.currentUser$;
   }
 
-  autoLogin(){
-    this.authService.currentUser$.subscribe({
-      next: (user) => this.isLoggedIn = !!user,
-      error: (error) => console.log(error),
-    })
-  }
+
 
   logout(){
     this.authService.logout();
