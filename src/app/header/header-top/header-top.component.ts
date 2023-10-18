@@ -25,13 +25,11 @@ export class HeaderTopComponent implements OnInit{
   faUser = faUser;
   faArrowRightFromBracket = faArrowRightFromBracket;
 
-  currentUser$: Observable<UserDto | null> = of(null);
 
-  constructor(private authService: AccountService, private router: Router) {
+  constructor(public authService: AccountService, private router: Router) {
   }
 
   ngOnInit() {
-    this.currentUser$ = this.authService.currentUser$;
   }
 
 
