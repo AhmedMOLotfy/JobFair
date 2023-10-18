@@ -3,7 +3,7 @@ import {Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {faEye as farEye} from "@fortawesome/free-regular-svg-icons";
 import {faEyeSlash as farEyeSlash} from "@fortawesome/free-regular-svg-icons";
-import {AuthService, UserDto} from "../auth.service";
+import {AccountService, UserDto} from "../account.service";
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit{
   farEyeSlash = farEyeSlash;
 
 
-  constructor(private router: Router, private authService: AuthService) {
+  constructor(private router: Router, private authService: AccountService) {
   }
 
 

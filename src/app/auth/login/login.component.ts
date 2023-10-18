@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthService, UserDto} from "../auth.service";
+import {AccountService} from "../account.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {faEye as farEye} from "@fortawesome/free-regular-svg-icons";
 import {faEyeSlash as farEyeSlash} from "@fortawesome/free-regular-svg-icons";
@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css','../register/register.component.css']
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
   showPass = false;
   isSubmitted = false;
   authForm: FormGroup = new FormGroup({});
@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit{
   farEyeSlash = farEyeSlash;
 
 
-  constructor(private authService: AuthService,private router: Router) {
+  constructor(private authService: AccountService, private router: Router) {
   }
 
   ngOnInit() {
@@ -43,7 +43,10 @@ export class LoginComponent implements OnInit{
 
     // register request
     this.authService.login(email, password).subscribe({
-      next: (resData: UserDto) => console.log(resData),
+      next: (resData) => {
+        console.log(resData);
+        this.router.navigate(['/job-listing']).then();
+      },
       error: (error) => console.log(error),
       complete: () => console.log("Request Completed successfully")
     });
