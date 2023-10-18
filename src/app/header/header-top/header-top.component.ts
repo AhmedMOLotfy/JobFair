@@ -1,14 +1,15 @@
 import {Component, OnInit} from '@angular/core';
 // font awesome icons
-import {faArrowRightToBracket,
-        faEnvelope,
-        faPhoneVolume,
-        faUserPlus,
-        faArrowRightFromBracket,
-        faUser} from '@fortawesome/free-solid-svg-icons';
-import {AccountService, UserDto} from "../../auth/account.service";
+import {
+  faArrowRightFromBracket,
+  faArrowRightToBracket,
+  faEnvelope,
+  faPhoneVolume,
+  faUser,
+  faUserPlus
+} from '@fortawesome/free-solid-svg-icons';
+import {AccountService} from "../../_services/account.service";
 import {Router} from "@angular/router";
-import {Observable, of} from "rxjs";
 
 // right-to-bracket
 @Component({

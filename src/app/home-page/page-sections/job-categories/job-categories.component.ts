@@ -1,8 +1,15 @@
-import { Component } from '@angular/core';
-import {faPersonChalkboard,faRectangleAd,
-  faPaintBrush, faCode, faNetworkWired,
-  faUserDoctor,faListCheck, faSatelliteDish} from "@fortawesome/free-solid-svg-icons";
-import {JobCategoryModel} from "./JobCategory.model";
+import {Component} from '@angular/core';
+import {
+  faCode,
+  faListCheck,
+  faNetworkWired,
+  faPaintBrush,
+  faPersonChalkboard,
+  faRectangleAd,
+  faSatelliteDish,
+  faUserDoctor
+} from "@fortawesome/free-solid-svg-icons";
+import {JobCategoryModel} from "../../../_models/JobCategory.model";
 
 @Component({
   selector: 'app-job-categories',

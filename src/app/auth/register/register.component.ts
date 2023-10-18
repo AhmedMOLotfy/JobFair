@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {faEye as farEye} from "@fortawesome/free-regular-svg-icons";
-import {faEyeSlash as farEyeSlash} from "@fortawesome/free-regular-svg-icons";
-import {AccountService, UserDto} from "../account.service";
+import {faEye as farEye, faEyeSlash as farEyeSlash} from "@fortawesome/free-regular-svg-icons";
+import {AccountService, UserDto} from "../../_services/account.service";
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

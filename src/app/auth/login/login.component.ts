@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {AccountService} from "../account.service";
+import {AccountService} from "../../_services/account.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {faEye as farEye} from "@fortawesome/free-regular-svg-icons";
-import {faEyeSlash as farEyeSlash} from "@fortawesome/free-regular-svg-icons";
+import {faEye as farEye, faEyeSlash as farEyeSlash} from "@fortawesome/free-regular-svg-icons";
 import {Router} from "@angular/router";
 
 @Component({

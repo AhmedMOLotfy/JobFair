@@ -1,10 +1,5 @@
 import {Component} from '@angular/core';
-import {
-  faCircleCheck,
-  faMagnifyingGlass,
-  faUser,
-  faCircleRight,
-  faArrowRight} from "@fortawesome/free-solid-svg-icons";
+import {faArrowRight, faCircleCheck, faCircleRight, faMagnifyingGlass, faUser} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
     selector: 'app-how-work',
@@ -16,5 +11,5 @@ export class HowWorkComponent {
     faMagnifyingGlass = faMagnifyingGlass;
     faCircleCheck = faCircleCheck;
     faCircleRight = faCircleRight;
-  faArrowRight = faArrowRight;
+    faArrowRight = faArrowRight;
 }

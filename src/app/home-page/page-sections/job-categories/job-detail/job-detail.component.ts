@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {JobCategoryModel} from "../JobCategory.model";
+import {JobCategoryModel} from "../../../../_models/JobCategory.model";
 import {faArrowsToCircle} from "@fortawesome/free-solid-svg-icons";
 
 @Component({

@@ -18,9 +18,9 @@ import {JobBoxComponent} from './home-page/page-sections/featured-jobs/job-box/j
 import {HttpClientModule} from "@angular/common/http";
 import {CandidatesComponent} from './candidates/candidates.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { RegisterComponent } from './auth/register/register.component';
-import { LoginComponent } from './auth/login/login.component';
-import { JobsListingComponent } from './jobs-listing/jobs-listing.component';
+import {RegisterComponent} from './auth/register/register.component';
+import {LoginComponent} from './auth/login/login.component';
+import {JobsListingComponent} from './jobs-listing/jobs-listing.component';
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
 
 

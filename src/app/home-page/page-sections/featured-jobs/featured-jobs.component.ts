@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 import {JobBoxModel} from "./job-box.model";
+
 @Component({
   selector: 'app-featured-jobs',
   templateUrl: './featured-jobs.component.html',

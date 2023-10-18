@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import {faEnvelope, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
-import {faLocationCrosshairs} from '@fortawesome/free-solid-svg-icons';
+import {Component} from '@angular/core';
+import {faEnvelope, faLocationCrosshairs, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 
 // location-crosshairs
 @Component({
