@@ -5,6 +5,7 @@ import {CandidatesComponent} from "./candidates/candidates.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {RegisterComponent} from "./auth/register/register.component";
 import {JobsListingComponent} from "./jobs-listing/jobs-listing.component";
+import {EmployersComponent} from "./employers/employers.component";
 
 
 const appRoutes: Routes = [
@@ -12,7 +13,8 @@ const appRoutes: Routes = [
   {path: 'candidates', component: CandidatesComponent},
   {path: 'login',component: LoginComponent},
   {path: 'register',component: RegisterComponent},
-  {path: 'job-listing',component: JobsListingComponent}
+  {path: 'job-listing',component: JobsListingComponent},
+  {path: 'employers', component: EmployersComponent}
 ];
 
 @NgModule({

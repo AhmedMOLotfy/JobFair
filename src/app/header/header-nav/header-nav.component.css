@@ -18,3 +18,17 @@ button span {
 .brand-style {
   color: #4357d1;
 }
+
+.active-tab{
+  color: #4357d1;
+}
+
+.activeTab::after{
+  content: '';
+  width: 75%;
+  height: 2px;
+  position: absolute;
+  background-color: #4357d1;
+  left: 12.5%;
+  bottom: 2px
+}

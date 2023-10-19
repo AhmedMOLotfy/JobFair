@@ -22,6 +22,7 @@ import {RegisterComponent} from './auth/register/register.component';
 import {LoginComponent} from './auth/login/login.component';
 import {JobsListingComponent} from './jobs-listing/jobs-listing.component';
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
+import { EmployersComponent } from './employers/employers.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {BsDropdownModule} from "ngx-bootstrap/dropdown";
     CandidatesComponent,
     RegisterComponent,
     LoginComponent,
-    JobsListingComponent
+    JobsListingComponent,
+    EmployersComponent
   ],
     imports: [
         BrowserModule,

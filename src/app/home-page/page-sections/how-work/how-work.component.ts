@@ -10,6 +10,5 @@ export class HowWorkComponent {
     faUser = faUser;
     faMagnifyingGlass = faMagnifyingGlass;
     faCircleCheck = faCircleCheck;
-    faCircleRight = faCircleRight;
     faArrowRight = faArrowRight;
 }
