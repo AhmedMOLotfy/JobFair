@@ -6,15 +6,21 @@ import {LoginComponent} from "./auth/login/login.component";
 import {RegisterComponent} from "./auth/register/register.component";
 import {JobsListingComponent} from "./jobs-listing/jobs-listing.component";
 import {EmployersComponent} from "./employers/employers.component";
+import {authGuard} from "./_guards/auth.guard";
 
 
 const appRoutes: Routes = [
   {path: '', component: PageSectionsComponent},
-  {path: 'candidates', component: CandidatesComponent},
+  {path: '/',
+    runGuardsAndResolvers: 'always',
+    canActivate: [authGuard],
+    children: [
+      {path: 'candidates', component: CandidatesComponent},
+      {path: 'job-listing',component: JobsListingComponent},
+      {path: 'employers', component: EmployersComponent}
+    ]},
   {path: 'login',component: LoginComponent},
   {path: 'register',component: RegisterComponent},
-  {path: 'job-listing',component: JobsListingComponent},
-  {path: 'employers', component: EmployersComponent}
 ];
 
 @NgModule({
