@@ -24,6 +24,8 @@ import {JobsListingComponent} from './jobs-listing/jobs-listing.component';
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
 import { EmployersComponent } from './employers/employers.component';
 
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -52,7 +54,8 @@ import { EmployersComponent } from './employers/employers.component';
         HttpClientModule,
         BrowserAnimationsModule,
         FormsModule,
-        BsDropdownModule
+        BsDropdownModule,
+        ToastrModule.forRoot(), // ToastrModule added
     ],
   providers: [],
   bootstrap: [AppComponent]

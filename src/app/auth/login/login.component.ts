@@ -3,6 +3,7 @@ import {AccountService} from "../../_services/account.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {faEye as farEye, faEyeSlash as farEyeSlash} from "@fortawesome/free-regular-svg-icons";
 import {Router} from "@angular/router";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
   farEyeSlash = farEyeSlash;
 
 
-  constructor(private authService: AccountService, private router: Router) {
+  constructor(private authService: AccountService, private router: Router,
+              private toastrService: ToastrService) {
   }
 
   ngOnInit() {
@@ -46,7 +48,10 @@ export class LoginComponent implements OnInit {
         console.log(resData);
         this.router.navigate(['/job-listing']).then();
       },
-      error: (error) => console.log(error),
+      error: (error) => {
+        console.log(error + "hey");
+        this.toastrService.error(error.error);
+      },
       complete: () => console.log("Request Completed successfully")
     });
   }
