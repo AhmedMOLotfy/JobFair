@@ -15,16 +15,16 @@ import {SectionTitleComponent} from "./ReusableComponent/section-title/section-t
 import {JobDetailComponent} from "./home-page/page-sections/job-categories/job-detail/job-detail.component";
 import {FeaturedJobsComponent} from "./home-page/page-sections/featured-jobs/featured-jobs.component";
 import {JobBoxComponent} from './home-page/page-sections/featured-jobs/job-box/job-box.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {CandidatesComponent} from './candidates/candidates.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RegisterComponent} from './auth/register/register.component';
 import {LoginComponent} from './auth/login/login.component';
 import {JobsListingComponent} from './jobs-listing/jobs-listing.component';
-import {BsDropdownModule} from "ngx-bootstrap/dropdown";
-import { EmployersComponent } from './employers/employers.component';
-
-import { ToastrModule } from 'ngx-toastr';
+import {EmployersComponent} from './employers/employers.component';
+import {SharedModule} from "./_modules/shared.module";
+import {TestErrorComponent} from './errors/test-error/test-error.component';
+import {ErrorInterceptor} from "./_interceptors/error.interceptor";
 
 
 @NgModule({
@@ -44,20 +44,22 @@ import { ToastrModule } from 'ngx-toastr';
     RegisterComponent,
     LoginComponent,
     JobsListingComponent,
-    EmployersComponent
+    EmployersComponent,
+    TestErrorComponent
   ],
-    imports: [
-        BrowserModule,
-        FontAwesomeModule,
-        ReactiveFormsModule,
-        AppRoutingModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        BsDropdownModule,
-        ToastrModule.forRoot(), // ToastrModule added
-    ],
-  providers: [],
+  imports: [
+    BrowserModule,
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    SharedModule,
+  ],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
