@@ -25,6 +25,8 @@ import {EmployersComponent} from './employers/employers.component';
 import {SharedModule} from "./_modules/shared.module";
 import {TestErrorComponent} from './errors/test-error/test-error.component';
 import {ErrorInterceptor} from "./_interceptors/error.interceptor";
+import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { ServerErrorComponent } from './errors/server-error/server-error.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import {ErrorInterceptor} from "./_interceptors/error.interceptor";
     LoginComponent,
     JobsListingComponent,
     EmployersComponent,
-    TestErrorComponent
+    TestErrorComponent,
+    NotFoundComponent,
+    ServerErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,7 @@ import {ErrorInterceptor} from "./_interceptors/error.interceptor";
     SharedModule,
   ],
   providers: [
-
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

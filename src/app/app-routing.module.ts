@@ -7,11 +7,14 @@ import {RegisterComponent} from "./auth/register/register.component";
 import {JobsListingComponent} from "./jobs-listing/jobs-listing.component";
 import {EmployersComponent} from "./employers/employers.component";
 import {authGuard} from "./_guards/auth.guard";
+import {TestErrorComponent} from "./errors/test-error/test-error.component";
+import {ServerErrorComponent} from "./errors/server-error/server-error.component";
+import {NotFoundComponent} from "./errors/not-found/not-found.component";
 
 
 const appRoutes: Routes = [
   {path: '', component: PageSectionsComponent},
-  {path: '/',
+  {path: '',
     runGuardsAndResolvers: 'always',
     canActivate: [authGuard],
     children: [
@@ -21,6 +24,10 @@ const appRoutes: Routes = [
     ]},
   {path: 'login',component: LoginComponent},
   {path: 'register',component: RegisterComponent},
+  {path: 'errors', component: TestErrorComponent},
+  {path: 'server-error', component: ServerErrorComponent},
+  {path: 'not-found', component: NotFoundComponent},
+  {path: '**', component: NotFoundComponent},
 ];
 
 @NgModule({
