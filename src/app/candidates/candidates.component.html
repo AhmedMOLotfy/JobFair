@@ -1,8 +1,170 @@
-<div class="container">
-  <h1>Candidates</h1>
+<div class="candidates-listing-section">
+  <div class="container">
+    <div class="section-headline">
+      <div class="main-headline">
+        <h3>Candidates List</h3>
+        <p>Home / Candidates List</p>
+      </div>
+    </div>
+  </div>
+  <div class="full-candidates-section">
+    <div class="container">
+      <form [formGroup]="searchForm">
+        <div class="candidates-list-section d-flex gap-3">
 
-  <ul *ngFor="let candidate of candidates">
-    <li>{{candidate.id}} - {{candidate.userName}} - {{candidate.email}}</li>
-  </ul>
+          <div class="filter-set">
+            <div class="search-set">
+              <input
+                class="form-control"
+                name="Search"
+                placeholder="Search"
+                type="text">
+              <input
+                class="form-control"
+                name="Category"
+                placeholder="Category"
+                type="text">
+            </div>
+            <hr>
+            <div class="job-type">
+              <p>Job Type</p>
+              <div class="radio-filter position-relative">
+                <div *ngFor="let jobType of jobTypes" class="radio">
+                  <label>
+                    <input
+                      [value]="jobType"
+                      formControlName="jobType"
+                      name="jobType"
+                      required
+                      type="radio"
+                    >
+                    <span>{{jobType}}</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="job-type">
+              <p>Last Activity</p>
+              <div class="radio-filter position-relative">
+                <div *ngFor="let lastActivity of lastActivityList" class="radio">
+                  <label>
+                    <input
+                      [value]="lastActivity"
+                      formControlName="lastActivity"
+                      name="lastActivity"
+                      required
+                      type="radio"
+                    >
+                    <span>{{lastActivity}}</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="job-type">
+              <p>Experience</p>
+              <div class="radio-filter position-relative">
+                <div *ngFor="let experience of experienceList" class="radio">
+                  <label>
+                    <input
+                      [value]="experience"
+                      formControlName="experience"
+                      name="experience"
+                      required
+                      type="radio"
+                    >
+                    <span>{{experience}}</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="job-type">
+              <p>Salary Range</p>
+              <div class="radio-filter position-relative">
+                <div *ngFor="let salary of salaryRangeList" class="radio">
+                  <label>
+                    <input
+                      [value]="salary"
+                      formControlName="salaryRange"
+                      name="salaryRange"
+                      required
+                      type="radio"
+                    > <span>{{salary}}</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="job-type">
+              <p>Gender</p>
+              <div class="radio-filter position-relative">
+                <div *ngFor="let gender of genders" class="radio">
+                  <label>
+                    <input
+                      [value]="gender"
+                      formControlName="gender"
+                      type="radio"> <span>{{ gender }}</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div (click)="onSubmit()" class="candidates-card-list">
+            <!--Top Section of left side-->
+            <div class="d-flex justify-content-between mt-2 mb-4">
+              <div class="sort-prefs mt-0 d-flex gap-2 align-items-center">
+                <p class="m-0">Sort by</p>
+                <div class="dropdown" dropdown>
+                  <span class="dropdown-toggle" dropdownToggle data-bs-toggle="dropdown" aria-expanded="false">Top Rated</span>
+                  <ul class="dropdown-menu" *dropdownMenu>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="asc-order mt-auto mb-auto">
+                <div class="icon-rounder">
+                  <fa-icon [icon]="faSort" >
+                  </fa-icon>
+                </div>
+              </div>
+            </div>
+            <!--Job list itself-->
+            <div class="candidates-box-list mt-3" *ngFor="let candidate of candidates">
+              <div class="candidate-box d-flex justify-content-between">
+                <div class="d-flex logo-info">
+                  <div class="profile-pic">
+                    <img alt="{{candidate.userName}}"
+                         [src]="candidate.photoUrl">
+                  </div>
+
+                  <div class="job-info">
+                    <h5 class="mb-1 text-start">{{candidate.userName}}</h5>
+                    <div class="job-title">
+                      <p class="mb-2">{{candidate.jobTitle}}</p>
+                    </div>
+                    <div class="job-loc-time text-start">
+                      <span>
+                        <fa-icon [icon]="faLocationDot" class="me-1"></fa-icon>
+                      </span>{{candidate.location}}
+                            <span>
+                        <fa-icon [icon]="faTag" class="ms-1 me-1"></fa-icon>
+                      </span>Design
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-auto mb-auto apply-btn">
+                  <button class="btn btn-primary">View Resume</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
