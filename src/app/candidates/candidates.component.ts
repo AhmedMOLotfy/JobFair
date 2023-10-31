@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {FormControl, FormGroup} from "@angular/forms";
 import {JobBoxModel} from "../home-page/page-sections/featured-jobs/job-box.model";
 import {faClockRotateLeft, faLocationDot, faSort, faTag} from "@fortawesome/free-solid-svg-icons";
